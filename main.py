@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 import random
 
-chrome_driver_path = "C:\Development\chromedriver.exe"
+chrome_driver_path = "Your chrome driver path "
 service_path = webdriver.chrome.service.Service(chrome_driver_path)
 
 driver = webdriver.Chrome(service=service_path)
@@ -50,5 +50,3 @@ while True:
             time.sleep(0.1)  # Add a small delay after clicking the object button
             money = int(driver.find_element(By.ID, "money").text)  # Re-locate the money element
 
-# here money is being changed inside for loop as we are purchasing right-hand panel things, so it's giving stale error means
-# previous money is no longer valid reassign money
