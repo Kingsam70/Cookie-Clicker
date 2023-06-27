@@ -44,7 +44,7 @@ while True:
     money = int(driver.find_element(By.ID, "money").text)
 
     for object in list_of_objects:
-        if money < get_price(object):
+        if money < get_price(object):  #Clicking the red buttons/ not purchasable wont cause any problem
             index = list_of_objects.index(object)
             click_object(list_of_objects[index - 1])
             time.sleep(0.1)  # Add a small delay after clicking the object button
